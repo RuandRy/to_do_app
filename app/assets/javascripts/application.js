@@ -20,7 +20,10 @@ function hideCompletedToDo() {
   $(event.target).closest(".dragndrop").hide();
   $(event.target).closest("#completed").prop("checked", true);
   event.preventDefault();
-  
+  $.ajax({
+    type:'PATCH',
+    url: "/complete/",
+  })
 }
 
 $(function (){
