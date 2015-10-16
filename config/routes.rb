@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     put :sort, on: :collection
   end
 
-  patch 'complete/:id' => 'todos#complete'
+  patch 'complete/:id' => 'to_dos#complete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,21 +1,23 @@
 <div class="dragndrop" data-id="<%= to_do.id %>">
-  <div class="panel-body">
-  <row>
-    <div class="col-md-3">
-      <%= to_do.task_name %>
-    </div>
-    <div class="col-md-3">
-      <%= to_do.due_on %>
-    </div>
-    <div class="col-md-3">
-      completed? <%= check_box_tag "completed[#{to_do.id}]", "True", to_do.completed, class: "complete-checkbox", id: "#{to_do.id}" %>
-    </div>
+  <% if to_do.completed != true %>
+    <div class="panel-body">
+      <row>
+        <div class="col-md-3">
+          <%= to_do.task_name %>
+        </div>
+        <div class="col-md-3">
+          <%= to_do.due_on %>
+        </div>
+        <div class="col-md-3">
+          completed? <%= check_box_tag "completed[#{to_do.id}]", "True", to_do.completed, class: "complete-checkbox", id: "#{to_do.id}" %>
+        </div>
 
-    <div class="col-md-3">
-      <button type="button" class="btn btn-info btn-sm>"><%= link_to 'Show', to_do %></button>
-      <button type="button" class="btn btn-success btn-sm>"><%= link_to 'Edit', edit_to_do_path(to_do) %></button>
-      <button type="button" class="btn btn-danger btn-sm>"><%= link_to 'Destroy', to_do, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        <div class="col-md-3">
+          <button type="button" class="btn btn-info btn-sm>"><%= link_to 'Show', to_do %></button>
+          <button type="button" class="btn btn-success btn-sm>"><%= link_to 'Edit', edit_to_do_path(to_do) %></button>
+          <button type="button" class="btn btn-danger btn-sm>"><%= link_to 'Destroy', to_do, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        </div>
+      </row>
     </div>
-  </row>
-  </div>
+  <% end %>
 </div>
