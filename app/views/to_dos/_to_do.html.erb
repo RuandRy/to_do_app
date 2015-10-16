@@ -1,12 +1,12 @@
-  <div class="panel panel-default" data-id="<%= to_do.id %>">
-    <row>
+<div class="dragndrop" data-id="<%= to_do.id %>">
+  <row>
     <div class="col-md-3">
       <%= to_do.task_name %>
     </div>
     <div class="col-md-3">
       <%= to_do.due_on %>
     </div>
-    <div class="col-md-3" id="completed-div">
+    <div class="col-md-3">
       <%= check_box_tag 'completed', to_do.completed %>
     </div>
     <div class="col-md-3">
@@ -15,4 +15,4 @@
       <button type="button" class="btn btn-danger btn-sm>"><%= link_to 'Destroy', to_do, method: :delete, data: { confirm: 'Are you sure?' } %></button>
     </div>
   </row>
-  </div>
+</div>
