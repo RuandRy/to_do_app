@@ -15,6 +15,11 @@ class ToDosController < ApplicationController
     render :nothing => true
   end
 
+  def complete
+    @to_do = ToDo.find(params[:id])
+    @to_do.update(completed: true)
+  end
+
   # GET /to_dos/1
   def show
   end
