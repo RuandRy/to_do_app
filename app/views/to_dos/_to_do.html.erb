@@ -1,12 +1,18 @@
 <div class="panel panel-default" data-id="<%= to_do.id %>">
-  <p class="todo"><%= to_do.task_name %>
-    <%= to_do.due_on %>
-    <%= to_do.priority %>
-    <div id="completed-div">
+  <row class="todo">
+    <div class="col-md-3">
+      <%= to_do.task_name %>
+    </div>
+    <div class="col-md-3">
+      <%= to_do.due_on %>
+    </div>
+    <div class="col-md-3" id="completed-div">
       <%= check_box_tag 'completed', to_do.completed %>
     </div>
-    <%= link_to 'Show', to_do %>
-    <%= link_to 'Edit', edit_to_do_path(to_do) %>
-    <%= link_to 'Destroy', to_do, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </p>
+    <div class="col-md-3">
+      <%= link_to 'Show', to_do %>
+      <%= link_to 'Edit', edit_to_do_path(to_do) %>
+      <%= link_to 'Destroy', to_do, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </row>
 </div>
