@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get 'session/new'
 
-  get 'session/create'
+  post 'session/create'
 
-  get 'session/destroy'
+  delete 'session/destroy'
 
   resources :users
   root 'to_dos#index'

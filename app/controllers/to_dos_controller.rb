@@ -1,5 +1,6 @@
 class ToDosController < ApplicationController
   before_action :set_to_do, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in
 
   # GET /to_dos
   def index
