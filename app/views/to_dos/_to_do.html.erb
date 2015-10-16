@@ -1,5 +1,5 @@
-<div class="panel panel-default" data-id="<%= to_do.id %>">
-  <row class="todo">
+<div class="dragndrop" data-id="<%= to_do.id %>">
+  <row>
     <div class="col-md-3">
       <%= to_do.task_name %>
     </div>
@@ -7,9 +7,8 @@
     <div class="col-md-3">
       <%= to_do.due_on %>
     </div>
-    <div class="col-md-3" id="completed-div">
-  
-      <%= check_box_tag 'completed', to_do.completed %>
+    <div class="col-md-3">
+      completed? <%= check_box_tag "completed[#{to_do.id}]", "True", to_do.completed, class: "complete-checkbox" %>
     </div>
 
     <div class="col-md-3">

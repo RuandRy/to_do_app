@@ -16,12 +16,13 @@
 //= require turbolinks
 //= require_tree .
 
-function hideCompletedToDo(checkbox) {
-  $(this).closest(".todo").hide();
-  $(this).closest(".completed-div").prop("checked", true);
+function hideCompletedToDo() {
+  $(event.target).closest(".dragndrop").hide();
+  $(event.target).closest("#completed").prop("checked", true);
   event.preventDefault();
+  
 }
 
 $(function (){
-  $("completed").on("checked", hideCompletedToDo;)
+  $(".complete-checkbox").on("click", hideCompletedToDo);
 });
