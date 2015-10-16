@@ -1,5 +1,5 @@
-<div class="panel panel-default" data-id="<%= to_do.id %>">
-  <row class="todo">
+  <div class="panel panel-default" data-id="<%= to_do.id %>">
+    <row>
     <div class="col-md-3">
       <%= to_do.task_name %>
     </div>
@@ -15,4 +15,4 @@
       <button type="button" class="btn btn-danger btn-sm>"><%= link_to 'Destroy', to_do, method: :delete, data: { confirm: 'Are you sure?' } %></button>
     </div>
   </row>
-</div>
+  </div>
