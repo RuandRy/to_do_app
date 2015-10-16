@@ -18,7 +18,7 @@ class ToDosControllerTest < ActionController::TestCase
 
   test "should create to_do" do
     assert_difference('ToDo.count') do
-      post :create, to_do: { due_on: @to_do.due_on, row_order: @to_do.row_order, task_name: @to_do.task_name }
+      post :create, to_do: { due_on: @to_do.due_on, priority: @to_do.priority, task_name: @to_do.task_name }
     end
 
     assert_redirected_to to_do_path(assigns(:to_do))
@@ -35,7 +35,7 @@ class ToDosControllerTest < ActionController::TestCase
   end
 
   test "should update to_do" do
-    patch :update, id: @to_do, to_do: { due_on: @to_do.due_on, row_order: @to_do.row_order, task_name: @to_do.task_name }
+    patch :update, id: @to_do, to_do: { due_on: @to_do.due_on, priority: @to_do.priority, task_name: @to_do.task_name }
     assert_redirected_to to_do_path(assigns(:to_do))
   end
 

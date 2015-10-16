@@ -3,9 +3,9 @@
 one:
   task_name: MyString
   due_on: 2015-10-15
-  row_order: 1
+  priority: 1
 
 two:
   task_name: MyString
   due_on: 2015-10-15
-  row_order: 1
+  priority: 1
