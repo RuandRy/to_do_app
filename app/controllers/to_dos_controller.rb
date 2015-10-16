@@ -16,7 +16,8 @@ class ToDosController < ApplicationController
 
   def complete
     @to_do = ToDo.find([params][:id])
-    @to_do.update([params][:completed])
+    @to_do.update(completed: true)
+    @id = [params[:id]]
   end
 
   # GET /to_dos/1

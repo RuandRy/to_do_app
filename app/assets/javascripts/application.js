@@ -17,13 +17,15 @@
 //= require_tree .
 
 function hideCompletedToDo() {
-  $(event.target).closest(".dragndrop").hide();
+  var row = $(event.target).closest(".dragndrop");
+  row.hide();
   $(event.target).closest("#completed").prop("checked", true);
   event.preventDefault();
+  var todo_id = this.id;
   $.ajax({
     type:'PATCH',
-    url: "/complete/",
-  })
+    url: "/complete/" + todo_id,
+  });
 }
 
 $(function (){
