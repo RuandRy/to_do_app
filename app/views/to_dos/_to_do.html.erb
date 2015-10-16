@@ -1,0 +1,10 @@
+<div class="panel panel-default" data-id="<%= to_do.id %>">
+  <p><%= to_do.task_name %>
+    <%= to_do.due_on %>
+    <%= to_do.priority %>
+    <%= to_do.completed %>
+    <%= link_to 'Show', to_do %>
+    <%= link_to 'Edit', edit_to_do_path(to_do) %>
+    <%= link_to 'Destroy', to_do, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+</div>
