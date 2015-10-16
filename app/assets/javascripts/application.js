@@ -17,11 +17,11 @@
 //= require_tree .
 
 function hideCompletedToDo(checkbox) {
-  $(this).closest(".todo").hide();
-  $(this).closest(".completed-div").prop("checked", true);
+  $(this).closest(".row").hide();
+  $(this).closest("#completed").prop("checked", true);
   event.preventDefault();
 }
 
 $(function (){
-  $("completed").on("checked", hideCompletedToDo;)
+  $("#completed").on("checked", hideCompletedToDo;)
 });
