@@ -6,6 +6,14 @@ class ToDosController < ApplicationController
     @to_dos = ToDo.all
   end
 
+  # Finds the todo with that id and updates its priority and position
+  def sort
+    params[:order].each do |k, v|
+      ToDo.find(value[:id]).update_attribute(:priority, value[:position])
+    end
+    render :nothing => true
+  end
+
   # GET /to_dos/1
   def show
   end
