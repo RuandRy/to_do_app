@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151015183733) do
+ActiveRecord::Schema.define(version: 20151016194831) do
 
   create_table "to_dos", force: :cascade do |t|
     t.string   "task_name"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20151015183733) do
     t.datetime "updated_at", null: false
     t.boolean  "completed"
     t.integer  "priority"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

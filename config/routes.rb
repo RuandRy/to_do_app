@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'session/new'
+
+  get 'session/create'
+
+  get 'session/destroy'
+
+  resources :users
   root 'to_dos#index'
   resources :to_dos do
     put :sort, on: :collection
