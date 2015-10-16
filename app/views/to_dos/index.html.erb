@@ -4,6 +4,7 @@
 
   <div class="sortable">
       <% @to_dos.each do |to_do| %>
+      <div class="panel panel-default" data-id="<%= to_do.id %>">
         <div>
           <p><%= to_do.task_name %>
           <%= to_do.due_on %>
@@ -14,6 +15,7 @@
           <%= link_to 'Destroy', to_do, method: :delete, data: { confirm: 'Are you sure?' } %></p>
         </div>
       <% end %>
+    </div>
   </div>
 
 <br>
