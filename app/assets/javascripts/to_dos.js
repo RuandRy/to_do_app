@@ -8,7 +8,6 @@ set_positions = function(){
     });
 }
 
-
 var ready;
 ready = function(){
     // call sortable on our div with the sortable class
@@ -35,7 +34,6 @@ ready = function(){
         });
     });
 }
-
 
 $(document).ready(ready);
 

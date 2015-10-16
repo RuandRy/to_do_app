@@ -15,3 +15,13 @@
 //= require html.sortable
 //= require turbolinks
 //= require_tree .
+
+function hideCompletedToDo(checkbox) {
+  $(this).closest(".todo").hide();
+  $(this).closest(".completed-div").prop("checked", true);
+  event.preventDefault();
+}
+
+$(function (){
+  $("completed").on("checked", hideCompletedToDo;)
+});
