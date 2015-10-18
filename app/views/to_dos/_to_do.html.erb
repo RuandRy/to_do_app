@@ -5,10 +5,10 @@
         <div class="col-md-3">
           <%= to_do.task_name %>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <%= to_do.due_on %>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           completed? <%= check_box_tag "completed[#{to_do.id}]", "True", to_do.completed, class: "complete-checkbox", id: "#{to_do.id}" %>
         </div>
         <div class="col-md-3">
@@ -18,15 +18,9 @@
       </row>
     </div>
   <% end %>
-  <div class="completed right-column">
+  <div class="right-column">
     <% if to_do.completed == true %>
-          <table class="table">
-            <tbody>
-                <tr>
-                  <td>Completed: <%= to_do.task_name %></td>
-                </tr>
-            </tbody>
-          </table>
+        <p><b>Completed:</b> <%= to_do.task_name %></p>
     <% end %>
   </div>
 </div>
