@@ -1,0 +1,14 @@
+<div>
+  <% if to_do.completed == true %>
+    <div class="panel-body">
+      <row>
+        <div class="col-md-6">
+          <%= to_do.task_name %>
+        </div>
+        <div class="col-md-6">
+          <%= to_do.due_on %>
+        </div>
+      </row>
+    </div>
+  <% end %>
+</div>
