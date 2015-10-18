@@ -3,6 +3,7 @@ require 'test_helper'
 class ToDosControllerTest < ActionController::TestCase
   setup do
     @to_do = to_dos(:one)
+    session[:user_id] = users(:one).id
   end
 
   test "should get index" do
