@@ -1,19 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Task name:</strong>
-  <%= @to_do.task_name %>
-</p>
+  <p>
+    <strong>Task name:</strong>
+    <%= @to_do.task_name %>
+  </p>
 
-<p>
-  <strong>Due on:</strong>
-  <%= @to_do.due_on %>
-</p>
+  <p>
+    <strong>Due on:</strong>
+    <%= @to_do.due_on %>
+  </p>
 
-<p>
-  <strong>Priority:</strong>
-  <%= @to_do.priority %>
-</p>
+  <p>
+    <strong>Priority:</strong>
+    <%= @to_do.priority %>
+  </p>
 
-<%= link_to 'Edit', edit_to_do_path(@to_do) %> |
-<%= link_to 'Back', to_dos_path %>
+  <%= link_to 'Edit', edit_to_do_path(@to_do) %> |
+  <%= link_to 'Back', to_dos_path %>
+</div>
