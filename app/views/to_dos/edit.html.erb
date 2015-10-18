@@ -3,6 +3,7 @@
 
   <%= render 'form' %>
 
+  <%= link_to 'Delete', @to_do, method: :delete, data: { confirm: 'Are you sure?' } %> |
   <%= link_to 'Show', @to_do %> |
   <%= link_to 'Back', to_dos_path %>
 
