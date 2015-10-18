@@ -12,24 +12,23 @@
       </div>
     <% end %>
 
-    <div class="field">
-      <%= f.label :task_name %><br>
-      <%= f.text_field :task_name %>
-    </div>
-    <div class="field">
-      <%= f.label :due_on %><br>
-      <%= f.date_select :due_on %>
-    </div>
-    <div class="field">
-      <%= f.label :priority %><br>
-      <%= f.number_field :priority %>
-    </div>
-    <div class="field">
-      <%= f.label :completed %><br>
-      <%= f.check_box :completed %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
-</div>
+  <div class="bg-success">
+    <%= f.label :task_name %><br>
+    <%= f.text_field :task_name %>
+  </div>
+  <div class="bg-warning">
+    <%= f.label :due_on %><br>
+    <%= f.date_select :due_on %>
+  </div>
+  <div class="bg-danger">
+    <%= f.label :priority %><br>
+    <%= f.number_field :priority %>
+  </div>
+  <div class="bg-danger">
+    <%= f.label :completed %><br>
+    <%= f.check_box :completed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
