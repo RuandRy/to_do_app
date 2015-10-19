@@ -4,7 +4,8 @@ class ToDosController < ApplicationController
 
   # GET /to_dos
   def index
-    @to_dos = ToDo.where(user_id: session[:user_id])
+    @to_dos = ToDo.where(user_id: session[:user_id], completed: false)
+    @completed = ToDo.where(user_id: session[:user_id], completed: true)
   end
 
   # Finds the todo with that id and updates its priority and position

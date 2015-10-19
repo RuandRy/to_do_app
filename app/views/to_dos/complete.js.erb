@@ -1,2 +1,2 @@
 $("#<%= @to_do.id %>").closest(".dragndrop").hide();
-$("#to_dos").append("<%=j(render@to_do)%>");
+$("#completed-stuff").append("<%=j(render partial: 'completed', locals: {to_do: @to_do})%>");

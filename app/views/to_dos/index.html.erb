@@ -4,8 +4,18 @@
   <h1 class="text-center">Listing To Dos</h1>
   <p class="text-center"><%= link_to 'New To do', new_to_do_path %></p>
 
-  <div class="sortable">
-    <%= render @to_dos %>
-  </div>
+  <row>
+    <div class="col-md-7">
+      <div class="sortable">
+        <%= render @to_dos %>
+      </div>
+    </div>
+
+    <div class="col-md-5" id="completed-stuff">
+      <% @completed.each do |c| %>
+        <%= render partial: "completed", locals: {to_do: c} %>
+      <% end %>
+    </div>
+  </row>
 
 </div>

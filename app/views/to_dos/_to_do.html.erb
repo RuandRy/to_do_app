@@ -1,26 +1,19 @@
 <div class="dragndrop" data-id="<%= to_do.id %>">
-  <% if to_do.completed != true %>
-    <div class="panel-body left-column">
-      <row>
-        <div class="col-md-3">
-          <%= to_do.task_name %>
-        </div>
-        <div class="col-md-2">
-          <%= to_do.due_on %>
-        </div>
-        <div class="col-md-2">
-          completed? <%= check_box_tag "completed[#{to_do.id}]", "True", to_do.completed, class: "complete-checkbox", id: "#{to_do.id}" %>
-        </div>
-        <div class="col-md-3">
-          <button type="button" class="btn btn-info btn-xs>"><%= link_to 'View', to_do %></button>
-          <button type="button" class="btn btn-success btn-xs>"><%= link_to 'Edit', edit_to_do_path(to_do) %></button>
-        </div>
-      </row>
-    </div>
-  <% end %>
-  <div class="right-column">
-    <% if to_do.completed == true %>
-        <p><b>Completed:</b> <%= to_do.task_name %></p>
-    <% end %>
+  <div class="panel-body left-column">
+    <row>
+      <div class="col-md-3">
+        <%= to_do.task_name %>
+      </div>
+      <div class="col-md-2">
+        <%= to_do.due_on %>
+      </div>
+      <div class="col-md-2">
+        completed? <%= check_box_tag "completed[#{to_do.id}]", "True", to_do.completed, class: "complete-checkbox", id: "#{to_do.id}" %>
+      </div>
+      <div class="col-md-3">
+        <button type="button" class="btn btn-info btn-xs>"><%= link_to 'View', to_do %></button>
+        <button type="button" class="btn btn-success btn-xs>"><%= link_to 'Edit', edit_to_do_path(to_do) %></button>
+      </div>
+    </row>
   </div>
 </div>
